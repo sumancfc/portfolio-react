@@ -1,13 +1,91 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 2;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.wrapper {
+  max-width: 1200px;
+  padding: 0 15px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.hero__section {
+  padding-top: 240px;
+  width: 100%;
+  padding-bottom: 60px;
+}
+
+.hero__section .hero__section-info {
+  padding-top: 60px;
+}
+
+.hero__section .hero__section-info .hero__section-title {
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+.hero__section .hero__section-info .hero__section-title-2 {
+  font-size: 3rem;
+  font-weight: 800;
+}
+.hero__section .hero__section-info .hero__section-p {
+  font-size: 1rem;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.button__link {
+  background-color: yellow;
+  border: 2px solid yellow;
+  padding: 15px 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.button__link:hover {
+  border: 2px solid yellow;
+  background-color: transparent;
+}
+
+.hero__section .hero__section-image {
+  max-width: 570px;
+  height: 540px;
+  float: right;
+}
+
+.hero__section .hero__section-image img {
+  height: 100%;
+}
+
+@media (max-width: 991px) {
+  .hero__section .hero__section-image {
+    float: left;
+    margin-top: 4rem;
+  }
+  .hero__section .hero__section-image img {
+    height: auto;
+  }
 }
