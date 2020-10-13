@@ -1,3 +1,4 @@
+/* global css */
 html {
   box-sizing: border-box;
 }
@@ -24,12 +25,46 @@ img {
   display: block;
 }
 
+ul {
+  margin-bottom: 0;
+  list-style: none;
+}
+
+/* common section */
+
 .wrapper {
   max-width: 1200px;
   padding: 0 15px;
   height: 100%;
   margin: 0 auto;
 }
+
+.button__link {
+  background-color: yellow;
+  border: 2px solid yellow;
+  padding: 15px 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.button__link:hover {
+  border: 2px solid yellow;
+  background-color: transparent;
+}
+
+.section__big-title {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.section__big-title .section__title {
+  font-size: 4rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+/* hero section */
 
 .hero__section {
   padding-top: 240px;
@@ -56,20 +91,6 @@ img {
   padding-bottom: 50px;
 }
 
-.button__link {
-  background-color: yellow;
-  border: 2px solid yellow;
-  padding: 15px 30px;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-.button__link:hover {
-  border: 2px solid yellow;
-  background-color: transparent;
-}
-
 .hero__section .hero__section-image {
   max-width: 570px;
   height: 540px;
@@ -79,6 +100,135 @@ img {
 .hero__section .hero__section-image img {
   height: 100%;
 }
+
+/* portfolio section */
+
+.portfolio__section {
+  padding: 30px 0;
+}
+
+.portfolio__section-nav ul.nav__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.portfolio__section-nav ul.nav__items li.nav__item {
+  padding: 5px 15px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-transform: uppercase;
+}
+.portfolio__section-nav ul.nav__items li:hover.nav__item {
+  background-color: yellow;
+}
+
+.portfolio__section-active {
+  background-color: yellow;
+  font-weight: 600;
+}
+
+.portfolio__section-filter {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+  margin-bottom: 50px;
+  background-attachment: fixed;
+  max-width: 200px;
+  float: right;
+  position: relative;
+  padding: 8px 10px;
+}
+
+.portfolio__section-filter p {
+  padding-right: 10px;
+  font-size: 1.2rem;
+}
+
+.portfolio__section-filter-nav {
+  background-color: gray;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  border-radius: 5px;
+  z-index: 999;
+}
+
+.portfolio__section-filter-nav p {
+  padding: 8px 0;
+  margin: 2px 0;
+  transition: 0.3s ease;
+  font-size: 1rem;
+}
+
+.portfolio__section-filter-nav p:hover {
+  background-color: yellow;
+}
+
+.portfolio__box {
+  position: relative;
+  max-width: 370px;
+  margin: 15px auto;
+  cursor: pointer;
+}
+
+.portfolio__box img {
+  width: 100%;
+  height: auto;
+}
+
+.portfolio__box .portfolio__hover-info {
+  background-color: rgba(255, 255, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.portfolio__box .flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio__box .flex-center .text-center {
+  text-align: center;
+}
+
+.portfolio__box .portfolio__hover-info p {
+  text-transform: uppercase;
+}
+
+.portfolio__box .portfolio__hover-info:hover {
+  opacity: 1;
+}
+
+.my-masonry-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: -30px;
+  width: auto;
+}
+.mint__gallery {
+  padding-left: 30px;
+  background-clip: padding-box;
+}
+
+/* 
+.mint__gallery > div {
+  
+  margin-bottom: 30px;
+} */
+
+/* Media Query for responsive */
 
 @media (max-width: 991px) {
   .hero__section .hero__section-image {
